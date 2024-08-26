@@ -1,0 +1,114 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: lightblue;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    width: 320px;
+    position: relative;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+select {
+    background-color: whitesmoke;
+}
+
+select:hover {
+    background-color: whitesmoke;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: #ff5733;
+}
+
+.cell.o {
+    color: #33c1ff;
+}
+
+.message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+.vs-human {
+    background-color: #e0f7fa;
+}
+
+.vs-computer {
+    background-color: #c8e6c9;
+}
+
+.winning-line {
+    display: none;
+}
